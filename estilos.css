@@ -1,0 +1,18 @@
+body{
+	font-family: Arial, sans-serif;
+	background: grey;
+}
+.tittle{ 
+	text-align: center;
+ 
+ }
+
+ .caja{
+	widows: 800px;
+ 	font:  small-caps 100%/150% serif;
+ }
+ .caja	img{
+	width:500px;
+	height: 250px;
+	float: right;
+ }
