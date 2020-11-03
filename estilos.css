@@ -1,18 +1,165 @@
-body{
-	font-family: Arial, sans-serif;
-	background: grey;
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
 }
-.tittle{ 
-	text-align: center;
- 
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #000 url('imagenes/fondo.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+.navegacion{
+	widows: 1000px;
+	margin: 30px auto;
+	background: #fff;
+}
+
+.navegation ul{
+	list-style: none;
+}
+.menu > li {
+	/* position: relative;*/
+	display: inline-block;
+}
+.menu > li > a{
+	/* position: relative;*/
+	display: block;
+	padding: 15px 20px;
+	color: #353535;
+	font-family: 'Open Sans';
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color:#CE7D35;
+	transition: all .3s;
+}
+
+ .submenu{
+ 	position: absolute;
+ 	background: #333333;
+ 	width: 120%;
+ 	visibility: hidden;
+ 	opacity: 0;
+ 	transition: opacity 1.5s;
  }
 
- .caja{
-	widows: 800px;
- 	font:  small-caps 100%/150% serif;
+ .submenu li a {
+ 	display: block;
+ 	padding: 15px;
+ 	color: #fff;
+ 	font-family: 'Open Sans';
+ 	text-decoration:none;
  }
- .caja	img{
-	width:500px;
-	height: 250px;
-	float: right;
+ .menu li:hover .submenu{
+ 	visibility: visible;
+ 	opacity: 1;
  }
+
+ .contenedor {
+	margin: auto;
+	width: 90%;
+	max-width: 1000px;
+	display: flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+.main {
+	background: #fff;
+	padding: 20px;
+	width: 70%;
+}
+
+.main article .thumb {
+	margin-bottom: 20px;
+}
+
+.main article .thumb img {
+	vertical-align: top;
+	width: 100%;
+}
+
+.main article h2 {
+	margin-bottom: 20px;
+	font-weight: normal;
+	font-size: 32px;
+}
+
+.main article p {
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 27px;
+}
+
+aside {
+	width: 30%;
+	background: #537dca;
+	padding: 20px;
+	display: flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+
+
+footer {
+	margin-top: 20px;
+	background: rgba(255,255,255,.2);
+	padding: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+	color: #fff;
+	display: flex;
+	flex-direction:row;
+	flex-wrap:no-wrap;
+	justify-content:space-between;
+}
+
+footer .redes-sociales a {
+	color: #fff;
+	text-decoration: underline;
+	margin-left: 20px;
+}
+
+footer .redes-sociales a:hover {
+	text-decoration: none;
+}
+
+
+@media screen and (max-width: 600px) {
+	header {
+		flex-direction:column;
+		padding-bottom: 20px; 
+	}
+
+	
+	header .logo {
+		margin-bottom: 10px;
+	} 
+
+	
+	footer {
+		flex-direction:column;
+		text-align: center;
+	}
+
+	footer .autor {
+		order:2;
+		color: red;
+	}
+
+	footer .redes-sociales {
+		order:1;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	aside {
+		display: none;
+	}
+}
